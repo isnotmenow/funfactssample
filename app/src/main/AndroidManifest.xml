@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.spdesigns.funfacts">
+
+  <application
+      android:name=".FunFactsApplication"
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+
+    <activity android:name=".FunFactsActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.FunFactsActivity" />
+        <category android:name="android.intent.category.FunFactsActivity" />
+      </intent-filter>
+    </activity>
+
+    <activity android:name=".SplashScreenActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+
+      <!-- This is needed if you want to launch the splash screen without knowing the default main -->
+      <!-- you can call it with:                                                                   -->
+      <!-- Intent intent = new Intent("com.spdesigns.funfacts.LaunchSplash")                       -->
+      <!-- context.startActivity(intent);                                                          -->
+      <intent-filter>
+        <action android:name="com.spdesigns.funfacts.LaunchSplash"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity>
+
+  </application>
+</manifest>
